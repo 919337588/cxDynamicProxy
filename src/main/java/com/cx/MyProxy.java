@@ -33,6 +33,10 @@ public class MyProxy {
                     + "this.h= h;" + rt + "}"
                     + getMethodString(methods, classInfo) + rt + "}";
             // 2. 写入到到本地文件中..
+            File file=new File("d:/code");
+            if(!file.exists()){
+                file.mkdirs();
+            }
             String filename = "d:/code/$Proxy0.java";
             File f = new File(filename);
             FileWriter fw = new FileWriter(f);
